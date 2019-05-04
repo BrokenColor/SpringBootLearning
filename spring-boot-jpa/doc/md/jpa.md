@@ -1,3 +1,5 @@
+# jpa常用查询汇总
+
 | 关键词|  样品|  JPQL代码段 |  
 | :------ | :------ | :------ |  
 |  And|  findByLastnameAndFirstname|  … where x.lastname = ?1 and x.firstname = ?2 |  
