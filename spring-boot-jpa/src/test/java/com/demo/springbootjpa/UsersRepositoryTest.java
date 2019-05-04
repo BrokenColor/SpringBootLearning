@@ -24,7 +24,7 @@ public class UsersRepositoryTest {
     public void testSave() {
         Users users = new Users();
         users.setName("王五");
-        users.setAge("20");
+        users.setAge("22");
         usersRepository.save(users);
 
     }
