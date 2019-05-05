@@ -15,9 +15,17 @@ public interface UsersRepositoryBy extends Repository<Users, Integer> {
     //方法的名称必须要遵循驼峰式命名规则findBy(关键字)+属性名称(首字母大写)+查询条件（首字母大写）
     List<Users> findByName(String name);
 
-    List<Users> findByNameAndAge(String name,String age);
+    List<Users> findByNameAndAge(String name,int age);
 
-    List<Users> findByNameOrAge(String name,String age);
+    List<Users> findByNameOrAge(String name,int age);
 
     List<Users> findByNameLike(String name);
+
+    List<Users> findByAgeBetween(int startAge, int endAge);
+
+    List<Users> findByAgeLessThan(int age);
+
+    List<Users> findByAgeOrderByName(int age);
+
+    List findByAgeIsNull();
 }

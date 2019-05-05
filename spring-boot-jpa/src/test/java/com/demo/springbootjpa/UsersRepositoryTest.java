@@ -30,7 +30,7 @@ public class UsersRepositoryTest {
     public void testSave() {
         Users users = new Users();
         users.setName("王五");
-        users.setAge("22");
+        users.setAge(22);
         usersRepository.save(users);
 
     }
@@ -49,7 +49,7 @@ public class UsersRepositoryTest {
      */
     @Test
     public void textFindByNameAndAge(){
-        List<Users> list = usersRepositoryBy.findByNameAndAge("gg","23");
+        List<Users> list = usersRepositoryBy.findByNameAndAge("gg",23);
         System.out.println(list);
     }
 
@@ -58,7 +58,7 @@ public class UsersRepositoryTest {
      */
     @Test
     public void textFindByNameOrAge(){
-        List<Users> list = usersRepositoryBy.findByNameOrAge("gg","20");
+        List<Users> list = usersRepositoryBy.findByNameOrAge("gg",20);
         System.out.println(list);
     }
 
@@ -68,6 +68,45 @@ public class UsersRepositoryTest {
     @Test
     public void textFindByNameLike(){
         List<Users> list = usersRepositoryBy.findByNameLike("g%");
+        System.out.println(list);
+    }
+
+    /**
+     * between
+     * between ?1 and ?2
+     */
+    @Test
+    public void textFindByAgeBetween(){
+        List<Users> list = this.usersRepositoryBy.findByAgeBetween(10,100);
+        System.out.println(list);
+    }
+
+    /**
+     * lessthan
+     * where x.age < ?1
+     */
+    @Test
+    public void textFindByAgeLessThan(){
+        List<Users> list = this.usersRepositoryBy.findByAgeLessThan(20);
+        System.out.println(list);
+    }
+
+    /**
+     * OrderBy
+     *
+     */
+    @Test
+    public void textFindOrderByName(){
+        List<Users> list = this.usersRepositoryBy.findByAgeOrderByName(20);
+        System.out.println(list);
+    }
+
+    /**
+     * isNull
+     */
+    @Test
+    public void textFindByAgeIsNull(){
+        List list = this.usersRepositoryBy.findByAgeIsNull();
         System.out.println(list);
     }
 }

@@ -25,6 +25,6 @@ public class Users {
     private String name;
 
     @Column(name = "user_age")
-    private String age;
+    private Integer age;
 
 }
