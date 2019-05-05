@@ -1,7 +1,5 @@
 package com.demo.springbootjpa;
 
-import com.demo.springbootjpa.dao.UsersRepository;
-import com.demo.springbootjpa.dao.UsersRepositoryBy;
 import com.demo.springbootjpa.dao.UsersRepositoryQueryAnnotation;
 import com.demo.springbootjpa.pojo.Users;
 import org.junit.Test;
