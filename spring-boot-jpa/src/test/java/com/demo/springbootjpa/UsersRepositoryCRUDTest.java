@@ -13,7 +13,7 @@ import java.util.Optional;
 
 /**
  * @Author: GWL
- * @Description:
+ * @Description: RepositoryCRUD
  * @Date: Create in 12:49 2019/5/5
  */
 @RunWith(SpringRunner.class)
@@ -30,8 +30,8 @@ public class UsersRepositoryCRUDTest {
     @Test
     public void testUsersRepositoryC() {
         Users users = new Users();
-        users.setName("三傻");
-        users.setAge(26);
+        users.setName("雪诺");
+        users.setAge(33);
         usersRepositoryCRUD.save(users);
     }
 
@@ -42,8 +42,8 @@ public class UsersRepositoryCRUDTest {
     @Test
     public void testUsersRepositoryU() {
         Users users = new Users();
-        users.setId(8);
-        users.setName("三傻");
+        users.setId(1);
+        users.setName("史塔克");
         users.setAge(36);
         usersRepositoryCRUD.save(users);
     }
@@ -60,5 +60,39 @@ public class UsersRepositoryCRUDTest {
 
         List<Users> list = (List) usersRepositoryCRUD.findAll();
         System.out.println(list);
+    }
+
+    /**
+     * crud Repository 测试
+     * delete
+     */
+    @Test
+    public void testUsersRepositoryD() {
+        usersRepositoryCRUD.deleteById(13);
+
+    }
+
+    /**
+     * crud Repository 测试
+     * count
+     */
+    @Test
+    public void testUsersRepositoryO() {
+
+        long count = usersRepositoryCRUD.count();
+        System.out.println(count);
+
+    }
+
+    /**
+     * crud Repository 测试
+     * existsById
+     */
+    @Test
+    public void testUsersRepositoryE() {
+
+        boolean exist = usersRepositoryCRUD.existsById(11);
+        System.out.println(exist);
+
     }
 }
