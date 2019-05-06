@@ -58,7 +58,7 @@ public class UsersRepositoryCRUDTest {
         Optional<?> usersOpt = usersRepositoryCRUD.findById(3);
         System.out.println(usersOpt.get());
 
-        List<Users> list = (List) usersRepositoryCRUD.findAll();
+        List list = (List) usersRepositoryCRUD.findAll();
         System.out.println(list);
     }
 
