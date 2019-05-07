@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -107,6 +108,16 @@ public class UsersRepositoryTest {
     @Test
     public void textFindByAgeIsNull(){
         List list = this.usersRepositoryBy.findByAgeIsNull();
+        System.out.println(list);
+    }
+
+    /**
+     * findall
+     */
+    @Test
+    public void textFindAllSort(){
+        Sort sort = Sort.by(Sort.Direction.DESC,"id");
+        List list = this.usersRepository.findAll(sort);
         System.out.println(list);
     }
 }
