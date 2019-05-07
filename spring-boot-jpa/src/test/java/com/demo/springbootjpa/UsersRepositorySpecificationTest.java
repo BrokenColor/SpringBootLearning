@@ -34,11 +34,11 @@ public class UsersRepositorySpecificationTest {
 
     /**
      * JpaSpecificationExecutor查询测试
-     *
+     * <p>
      * 单个查询条件
      */
     @Test
-    public void testUsersRepositorySpecification(){
+    public void testUsersRepositorySpecification() {
         /**
          * Predicate 单个查询条件
          *
@@ -55,7 +55,7 @@ public class UsersRepositorySpecificationTest {
                  * 查询的条件属性
                  * 条件的值
                  */
-                Predicate pre =criteriaBuilder.equal(root.get("name"),"王五");
+                Predicate pre = criteriaBuilder.equal(root.get("name"), "王五");
                 return pre;
             }
         };
@@ -66,11 +66,11 @@ public class UsersRepositorySpecificationTest {
 
     /**
      * JpaSpecificationExecutor查询测试
-     *
+     * <p>
      * 多条件查询
      */
     @Test
-    public void testUsersRepositorySpecification2(){
+    public void testUsersRepositorySpecification2() {
         /**
          * Root<Users> root：查询对象的属性的封装
          * CriteriaQuery<?> criteriaQuery：封装我们要执行的查询中的各部分的信息，select from order
@@ -85,13 +85,45 @@ public class UsersRepositorySpecificationTest {
                  * 条件的值
                  */
                 List<Predicate> list = new ArrayList<>();
-                list.add(criteriaBuilder.equal(root.get("name"),"王五"));
-                list.add(criteriaBuilder.equal(root.get("age"),"20"));
+                list.add(criteriaBuilder.equal(root.get("name"), "王五"));
+                list.add(criteriaBuilder.equal(root.get("age"), "20"));
                 Predicate[] arr = new Predicate[list.size()];
                 return criteriaBuilder.and(list.toArray(arr));
             }
         };
         List list = this.usersRepositorySpecification.findAll(spe);
+        System.out.println(list);
+    }
+
+    /**
+     * JpaSpecificationExecutor查询测试
+     * <p>
+     * 多条件查询 and+or+排序
+     */
+    @Test
+    public void testUsersRepositorySpecification3() {
+        /**
+         * Root<Users> root：查询对象的属性的封装
+         * CriteriaQuery<?> criteriaQuery：封装我们要执行的查询中的各部分的信息，select from order
+         * CriteriaBuilder criteriaBuilder：查询条件的构造器，定义不同的查询条件
+         */
+        Specification<Users> spe = new Specification<Users>() {
+            @Override
+            public Predicate toPredicate(Root<Users> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                /**
+                 * where id = 5 or (name='王五' and age=20)
+                 */
+
+                return criteriaBuilder.or(
+                        criteriaBuilder.and(
+                                criteriaBuilder.equal(root.get("name"), "王五"),
+                                criteriaBuilder.equal(root.get("age"), 20)),
+                        criteriaBuilder.equal(root.get("id"),5));
+            }
+        };
+        //添加排序
+        Sort sort = Sort.by(Sort.Direction.DESC,"id");
+        List list = this.usersRepositorySpecification.findAll(spe,sort);
         System.out.println(list);
     }
 
