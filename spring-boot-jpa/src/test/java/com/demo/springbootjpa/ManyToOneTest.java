@@ -42,7 +42,6 @@ public class ManyToOneTest {
         users.setCreateDate(new Date());
 
         //关联
-        //关联
         roles.getUsers().add(users);
         users.setRoles(roles);
 

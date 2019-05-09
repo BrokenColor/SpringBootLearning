@@ -22,7 +22,7 @@ public class Roles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "role_id")
-    private int roleid;
+    private int roleId;
 
     @Column(name = "role_name")
     private  String roleName;
@@ -39,10 +39,16 @@ public class Roles {
     @OneToMany(mappedBy = "roles")
     private Set<Users> users = new HashSet<>();
 
+    @ManyToMany(cascade = CascadeType.PERSIST,fetch = FetchType.EAGER)
+    //JoinTable 映射中间表
+    //joinColumns 当前表中的主键，关联表中的外键字段
+    @JoinTable(name = "t_roles_menu",joinColumns = @JoinColumn(name = "role_id"),inverseJoinColumns = @JoinColumn(name = "menu_id"))
+    private  Set<Menu> menus = new HashSet<>();
+
     @Override
     public String toString() {
         return "Roles{" +
-                "roleid=" + roleid +
+                "roleid=" + roleId +
                 ", roleName='" + roleName + '\'' +
                 ", note='" + note + '\'' +
                 '}';
