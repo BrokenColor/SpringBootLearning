@@ -71,4 +71,12 @@ public class Users {
     @JoinColumn(name = "r_id")
     private Roles roles;
 
+//    @Override
+//    public String toString() {
+//        return "Users{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", age=" + age +
+//                '}';
+//    }
 }

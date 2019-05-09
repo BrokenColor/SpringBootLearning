@@ -1,6 +1,8 @@
 package com.demo.springbootjpa.pojo;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -13,7 +15,8 @@ import java.util.Set;
  */
 @Entity
 @Table(name="t_roles")
-@Data
+@Getter
+@Setter
 public class Roles {
 
     @Id
@@ -36,4 +39,12 @@ public class Roles {
     @OneToMany(mappedBy = "roles")
     private Set<Users> users = new HashSet<>();
 
+    @Override
+    public String toString() {
+        return "Roles{" +
+                "roleid=" + roleid +
+                ", roleName='" + roleName + '\'' +
+                ", note='" + note + '\'' +
+                '}';
+    }
 }
