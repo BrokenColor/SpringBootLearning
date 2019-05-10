@@ -40,6 +40,7 @@ public class ManyToOneTest {
         users.setName("黑豹");
         users.setAge(60);
         users.setCreateDate(new Date());
+        users.setCreateDate(new Date());
 
         //关联
         roles.getUsers().add(users);
