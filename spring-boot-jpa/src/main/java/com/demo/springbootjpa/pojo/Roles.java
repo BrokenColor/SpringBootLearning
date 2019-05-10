@@ -9,7 +9,7 @@ import java.util.Set;
 
 /**
  * @Author: GWL
- * @Description: 角色表
+ * @Description: 角色表 与用户表一对多，角色表与菜单表多对多
  * @Date: Create in 19:06 2019/5/8
  */
 @Entity
