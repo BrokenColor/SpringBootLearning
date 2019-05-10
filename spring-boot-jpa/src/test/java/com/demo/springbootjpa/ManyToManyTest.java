@@ -1,19 +1,14 @@
 package com.demo.springbootjpa;
 
 import com.demo.springbootjpa.dao.RolesRepository;
-import com.demo.springbootjpa.dao.UsersRepository;
 import com.demo.springbootjpa.pojo.Menu;
 import com.demo.springbootjpa.pojo.Roles;
-import com.demo.springbootjpa.pojo.Users;
-import org.hibernate.criterion.Example;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Date;
-import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 

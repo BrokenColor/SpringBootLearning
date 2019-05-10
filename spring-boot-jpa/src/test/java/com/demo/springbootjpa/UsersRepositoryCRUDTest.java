@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +33,7 @@ public class UsersRepositoryCRUDTest {
         Users users = new Users();
         users.setName("雪诺");
         users.setAge(33);
+        users.setCreateDate(new Date());
         usersRepositoryCRUD.save(users);
     }
 
@@ -55,7 +57,7 @@ public class UsersRepositoryCRUDTest {
     @Test
     public void testUsersRepositoryR() {
 
-        Optional<?> usersOpt = usersRepositoryCRUD.findById(3);
+        Optional<?> usersOpt = usersRepositoryCRUD.findById(28);
         System.out.println(usersOpt.get());
 
         List list = (List) usersRepositoryCRUD.findAll();
@@ -68,7 +70,7 @@ public class UsersRepositoryCRUDTest {
      */
     @Test
     public void testUsersRepositoryD() {
-        usersRepositoryCRUD.deleteById(13);
+        usersRepositoryCRUD.deleteById(3);
 
     }
 

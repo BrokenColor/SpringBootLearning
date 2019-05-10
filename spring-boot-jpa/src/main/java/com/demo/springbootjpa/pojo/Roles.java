@@ -1,6 +1,5 @@
 package com.demo.springbootjpa.pojo;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -39,6 +38,12 @@ public class Roles {
     @OneToMany(mappedBy = "roles")
     private Set<Users> users = new HashSet<>();
 
+    /**
+     * 1.一对一和多对一的@JoinColumn注解的都是在“主控方”，都是本表指向外表的外键名称。
+     * 2.一对多的@JoinColumn注解在“被控方”，即一的一方，指的是外表中指向本表的外键名称。
+     * 3.多对多中，joinColumns写的都是本表在中间表的外键名称，
+     *              inverseJoinColumns写的是另一个表在中间表的外键名称。
+     */
     @ManyToMany(cascade = CascadeType.PERSIST,fetch = FetchType.EAGER)
     //JoinTable 映射中间表
     //joinColumns 当前表中的主键，关联表中的外键字段

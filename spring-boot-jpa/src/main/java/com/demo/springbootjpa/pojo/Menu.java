@@ -2,7 +2,6 @@ package com.demo.springbootjpa.pojo;
 
 import lombok.Data;
 
-import javax.naming.Name;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
