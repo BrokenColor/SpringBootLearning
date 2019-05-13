@@ -4,6 +4,7 @@ import com.ehcache.springbootehcache.dao.CityRepository;
 import com.ehcache.springbootehcache.pojo.City;
 import com.ehcache.springbootehcache.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,6 +24,7 @@ public class CityServideImpl implements CityService {
     private CityRepository cityRepository;
 
     @Override
+    @Cacheable(value="city")
     public List<City> findCityAll() {
         return this.cityRepository.findAll();
     }
@@ -36,17 +38,25 @@ public class CityServideImpl implements CityService {
      * @return
      */
     @Override
-    @Cacheable(value = "city",key = "'city_'+#id")
+    @Cacheable(value = "city")
     public City findCityById(Integer id) {
         return this.cityRepository.findById(id).get();
     }
 
+    /**
+     * #pageable.pageSize为缓存主键
+     * @param pageable
+     * @return
+     */
     @Override
+    @Cacheable(value = "city",key = "#pageable.pageSize")
     public Page<City> findCityByPage(Pageable pageable) {
         return this.cityRepository.findAll(pageable);
     }
 
     @Override
+    //@CacheEvict(value="city",allEntries=true) 清除缓存中以city缓存策略缓存的对象
+    @CacheEvict(value="city",allEntries=true)
     public void saveCity(City city) {
         this.cityRepository.save(city);
     }
