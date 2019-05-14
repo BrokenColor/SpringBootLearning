@@ -12,14 +12,14 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @Description: redis配置
  * redisTemplate 序列化使用的jdkSerializeable, 存储二进制字节码, 所以自定义序列化类
  * 一般redis的序列化方式主要有：字符串序列化、json序列化、xml序列化、jdk序列化
- *
+ * 默认为 JdkSerializationRedisSerializer
  * @Date: Create in 14:43 2019/5/14
  */
 @Configuration
 public class RedisConfig {
 
     @Bean
-    public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory redisCollectionFactory){
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisCollectionFactory) {
         RedisTemplate template = new RedisTemplate();
         template.setConnectionFactory(redisCollectionFactory);
 
@@ -29,7 +29,7 @@ public class RedisConfig {
         //String序列化
 //        template.setValueSerializer(new StringRedisSerializer());
         //jdk序列化
-        template.setValueSerializer(new JdkSerializationRedisSerializer());
+//        template.setValueSerializer(new JdkSerializationRedisSerializer());
 
         //设置key序列-String序列化
         template.setKeySerializer(new StringRedisSerializer());
