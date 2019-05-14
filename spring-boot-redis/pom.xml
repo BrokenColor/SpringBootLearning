@@ -52,6 +52,13 @@
             <artifactId>druid</artifactId>
             <version>1.0.25</version>
         </dependency>
+
+        <!-- Spring Boot Redis 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.3.2.RELEASE</version>
+        </dependency>
         <!-- Lombok工具 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
