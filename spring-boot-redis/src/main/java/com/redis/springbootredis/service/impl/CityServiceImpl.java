@@ -1,5 +1,8 @@
 package com.redis.springbootredis.service.impl;
 
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.redis.springbootredis.dao.CityRepository;
 import com.redis.springbootredis.pojo.City;
 import com.redis.springbootredis.service.CityService;
@@ -8,12 +11,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 /**
  * @Author: GWL
@@ -34,16 +36,26 @@ public class CityServiceImpl implements CityService {
         return this.cityRepository.findAll();
     }
 
+    /**
+     * 默认jdk序列化
+     * @param id
+     * @return
+     */
     @Override
     public City findCityById(Integer id) {
 
-        //重新设置序列化器
+        //默认 jdk序列化
 //        this.redisTemplate.setValueSerializer(new JdkSerializationRedisSerializer());
+        ////重新设置序列化器json
+//        this.redisTemplate.setValueSerializer(new Jackson2JsonRedisSerializer<>(Object.class));
 
         String cityKey ="city_"+id;
-        ValueOperations<String,City> operations = redisTemplate.opsForValue();
+        ValueOperations<String,City> operations = this.redisTemplate.opsForValue();
         // 判断缓存中是否存在
-        if (redisTemplate.hasKey(cityKey)){
+        if (this.redisTemplate.hasKey(cityKey)){
+//            String str = JSONObject.toJSONString(operations.get(cityKey));
+//            City cityy = JSON.parseObject(str,City.class);
+
             City city = operations.get(cityKey);
             return city;
         }

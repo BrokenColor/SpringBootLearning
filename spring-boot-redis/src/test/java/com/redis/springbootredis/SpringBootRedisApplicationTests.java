@@ -15,6 +15,9 @@ public class SpringBootRedisApplicationTests {
     @Autowired
     private CityService cityService;
 
+    /**
+     * 用默认jdk序列化
+     */
     @Test
     public void testFindCityById() {
         City city  = this.cityService.findCityById(2);
