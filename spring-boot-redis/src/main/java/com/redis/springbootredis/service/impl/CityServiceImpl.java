@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: GWL
- * @Description:
+ * @Description: CityService实现类
  * @Date: Create in 10:53 2019/5/14
  */
 @Service
@@ -53,6 +53,7 @@ public class CityServiceImpl implements CityService {
         ValueOperations<String,City> operations = this.redisTemplate.opsForValue();
         // 判断缓存中是否存在
         if (this.redisTemplate.hasKey(cityKey)){
+            //手动转换
 //            String str = JSONObject.toJSONString(operations.get(cityKey));
 //            City cityy = JSON.parseObject(str,City.class);
 
