@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com</groupId>
-    <artifactId>helloworld</artifactId>
+    <artifactId>spring-boot-helloworld</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>helloworld</name>
+    <name>spring-boot-helloworld</name>
     <description>HelloWorld project for Spring Boot</description>
 
     <properties>
