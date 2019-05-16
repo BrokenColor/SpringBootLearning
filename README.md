@@ -1,8 +1,8 @@
 # SpringBootLearning
     SpringBoot 学习
 ### 项目
->* spring-boot-hello 
->> SpringBoot项目实战hello
+> * spring-boot-hello 
+> > SpringBoot项目实战hello
 >* spring-boot-jap 
 >> SpringBoot项目实战jpa
 >* spring-boot-ehcache
