@@ -1,9 +1,13 @@
 package com.web.springbootwebconfig;
 
+import com.web.springbootwebconfig.servlet.SecondServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;
 
+import javax.servlet.ServletRegistration;
 import javax.servlet.annotation.WebServlet;
 
 @SpringBootApplication
@@ -13,5 +17,6 @@ public class SpringBootWebconfigApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootWebconfigApplication.class, args);
 	}
+
 
 }

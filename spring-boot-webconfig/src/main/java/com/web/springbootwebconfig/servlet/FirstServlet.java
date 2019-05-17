@@ -29,7 +29,7 @@ public class FirstServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doGet(req, resp);
-        System.out.println("getServletName: "+this.getServletName());
+        System.out.println("SpringBoot整合Servlet方式一:"+this.getServletName());
         System.out.println("getServerInfo: "+this.getServletContext().getServerInfo());
         System.out.println("getVirtualServerName: "+this.getServletContext().getVirtualServerName());
         System.out.println("getContextPath: "+this.getServletContext().getContextPath());
