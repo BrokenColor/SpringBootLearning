@@ -8,6 +8,7 @@
 >   * 通过注解扫描完成servlet，filter，listener组件的注册
 >   * 通过方法完成servlet，filter，listener组件注册
 >   * 访问静态资源存
+>   * 简易文件上传的实现
 > * spring-boot-jpa 
 >   * SpringBoot项目实战jpa
 > * spring-boot-ehcache
