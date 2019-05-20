@@ -41,6 +41,7 @@ public class MasterDataSourceConfig {
 //    @Value("${master.datasource.driverClassName}")
 //    private String driverClass;
 
+    //@Primary：自动装配时当出现多个Bean候选者时，被注解为@Primary的Bean将作为首选者，否则将抛出异常
     @Bean(name = "masterDataSource")
     @Primary
     @ConfigurationProperties(prefix="master.datasource")

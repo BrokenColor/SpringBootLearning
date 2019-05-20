@@ -40,11 +40,14 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!-- 数据库连接池 -->
+        <!-- Druid数据库连接池
+             通过Druid-Spring-Boot-Starter可以自动完成相关的配置， 而无须自定义配置文件，
+             https://github.com/alibaba/druid/tree/master/druid-spring-boot-starter
+        -->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.25</version>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
         </dependency>
 
         <!-- SpringBoot 热部署启动器  -->

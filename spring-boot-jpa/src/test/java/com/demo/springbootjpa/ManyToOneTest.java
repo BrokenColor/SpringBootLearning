@@ -40,10 +40,16 @@ public class ManyToOneTest {
         users.setName("黑豹");
         users.setAge(60);
         users.setCreateDate(new Date());
-        users.setCreateDate(new Date());
+
+        //创建用户
+        Users user1 = new Users();
+        user1.setName("黑寡妇");
+        user1.setAge(60);
+        user1.setCreateDate(new Date());
 
         //关联
         roles.getUsers().add(users);
+        roles.getUsers().add(user1);
         users.setRoles(roles);
 
         //保存

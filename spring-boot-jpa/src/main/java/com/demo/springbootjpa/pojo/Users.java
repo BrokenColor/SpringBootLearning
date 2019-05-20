@@ -21,7 +21,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name="user")
+@Table(name="t_user")
 @Data
 public class Users {
     /**
@@ -57,7 +57,7 @@ public class Users {
      * 则需要而外标注@Temporal注释来说明转化成java.util包中的类型。
      */
     @Temporal(value=TemporalType.TIMESTAMP)
-    @Column(name = "create_date")
+    @Column(name = "create_date",nullable = false)
     private java.util.Date createDate;
 
     /**
@@ -73,10 +73,12 @@ public class Users {
      *   inverseJoinColumns写的是另一个表在中间表的外键名称。
      */
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "r_id")
+    @JoinColumn(name = "r_id",nullable = false)
     private Roles roles;
 
 //    @Override
+
+
 //    public String toString() {
 //        return "Users{" +
 //                "id=" + id +
