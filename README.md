@@ -11,6 +11,7 @@
 >   * 简易文件上传的实现
 > * spring-boot-jpa 
 >   * SpringBoot项目实战jpa
+>   * 整合druid数据库连接池
 > * spring-boot-ehcache
 >   * SpringBoot项目实战ehcache缓存
 > * spring-boot-redis
