@@ -7,7 +7,7 @@
 >   * SpringBoot两种方式分别配置servlet，filter，listener
 >   * 通过注解扫描完成servlet，filter，listener组件的注册
 >   * 通过方法完成servlet，filter，listener组件注册
->   * 访问静态资源存
+>   * 访问静态资源
 >   * 简易文件上传的实现
 > * spring-boot-web-jsp
 >   * SpringBoot之jsp
