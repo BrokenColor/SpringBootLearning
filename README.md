@@ -9,6 +9,8 @@
 >   * 通过方法完成servlet，filter，listener组件注册
 >   * 访问静态资源存
 >   * 简易文件上传的实现
+> * spring-boot-web-jsp
+>   * SpringBoot之jsp
 > * spring-boot-jpa 
 >   * SpringBoot项目实战jpa
 >   * 整合druid数据库连接池
