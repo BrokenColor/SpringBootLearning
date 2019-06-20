@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @Author: GWL
- * @Description: 定时任务
+ * @Description: @Scheduled 定时任务
  * @Date: Create in 10:46 2019/5/15
  */
 @Component
