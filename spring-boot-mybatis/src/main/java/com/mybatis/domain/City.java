@@ -1,9 +1,12 @@
 package com.mybatis.domain;
 
+import lombok.Data;
+
 /**
  * @author BrokenColor
  * @data 2018年5月24日
  */
+@Data
 public class City {
 
 	 /**
@@ -21,27 +24,4 @@ public class City {
      */
     private String description;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

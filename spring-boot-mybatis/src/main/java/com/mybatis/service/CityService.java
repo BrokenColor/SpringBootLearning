@@ -14,11 +14,11 @@ public interface CityService {
 
 	City getCityById(Long id);
 
-	public List<City> getCityList();
+	List<City> getCityList();
 
-	public int add(City city);
+	int add(City city);
 
-	public int update(Long id, City city);
+	int update(Long id, City city);
 
-	public int delete(Long id);
+	int delete(Long id);
 }

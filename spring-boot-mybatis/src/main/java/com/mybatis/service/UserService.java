@@ -15,11 +15,11 @@ public interface UserService {
 	
 	PageInfo<User> selectAll(Integer page,Integer size);
 	
-	public List<User> getUserList();
+	List<User> getUserList();
 
-	public int add(User user);
+	int add(User user);
 
-	public int update(Long id, User user);
+	int update(Long id, User user);
 
-	public int delete(Long id);
+	int delete(Long id);
 }

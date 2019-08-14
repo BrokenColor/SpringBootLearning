@@ -1,44 +1,30 @@
 package com.mybatis.config;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.support.config.FastJsonConfig;
+import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.web.method.HandlerMethod;
-import org.springframework.web.servlet.HandlerExceptionResolver;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-import org.springframework.web.servlet.handler.HandlerExceptionResolverComposite;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.alibaba.fastjson.support.config.FastJsonConfig;
-import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4;
-import com.mybatis.core.ServiceException;
-import com.mybatis.domain.JsonResult;
-import com.mybatis.service.impl.UserServiceImpl;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 自定义消息转换器
- * 
+ *
  * @author BrokenColor
  * @date 2018年6月14日
  */
 @Configuration
 public class WebConfigurer extends WebMvcConfigurationSupport {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(WebConfigurer.class);
+//	private static final Logger LOGGER = LoggerFactory.getLogger(WebConfigurer.class);
 	/**
 	 * 修改自定义消息转换器
 	 */
