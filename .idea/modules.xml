@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringBootLearning.iml" filepath="$PROJECT_DIR$/.idea/SpringBootLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-mybatis/mybatis.iml" filepath="$PROJECT_DIR$/spring-boot-mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-ehcache/spring-boot-ehcache.iml" filepath="$PROJECT_DIR$/spring-boot-ehcache/spring-boot-ehcache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-fastdfs/spring-boot-fastdfs.iml" filepath="$PROJECT_DIR$/spring-boot-fastdfs/spring-boot-fastdfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-helloworld/spring-boot-helloworld.iml" filepath="$PROJECT_DIR$/spring-boot-helloworld/spring-boot-helloworld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-jpa/spring-boot-jpa.iml" filepath="$PROJECT_DIR$/spring-boot-jpa/spring-boot-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-redis/spring-boot-redis.iml" filepath="$PROJECT_DIR$/spring-boot-redis/spring-boot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-scheduled/spring-boot-scheduled.iml" filepath="$PROJECT_DIR$/spring-boot-scheduled/spring-boot-scheduled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-web-jsp/spring-boot-web.iml" filepath="$PROJECT_DIR$/spring-boot-web-jsp/spring-boot-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-webconfig/spring-boot-webconfig.iml" filepath="$PROJECT_DIR$/spring-boot-webconfig/spring-boot-webconfig.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-scheduled" />
+        <module name="spring-boot-helloworld" />
+        <module name="mybatis" />
+        <module name="SpringBootLearning" />
+        <module name="spring-boot-jpa" />
+        <module name="spring-boot-webconfig" />
+        <module name="spring-boot-web" />
+        <module name="spring-boot-ehcache" />
+        <module name="spring-boot-redis" />
+        <module name="spring-boot-fastdfs" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis" target="1.8" />
+      <module name="spring-boot-ehcache" target="1.8" />
+      <module name="spring-boot-fastdfs" target="1.8" />
+      <module name="spring-boot-helloworld" target="1.8" />
+      <module name="spring-boot-jpa" target="1.8" />
+      <module name="spring-boot-redis" target="1.8" />
+      <module name="spring-boot-scheduled" target="1.8" />
+      <module name="spring-boot-web" target="1.8" />
+      <module name="spring-boot-webconfig" target="1.8" />
+      <module name="SpringBootLearning" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringBootLearning" options="-parameters" />
+      <module name="mybatis" options="-parameters" />
+      <module name="spring-boot-ehcache" options="-parameters" />
+      <module name="spring-boot-fastdfs" options="-parameters" />
+      <module name="spring-boot-helloworld" options="-parameters" />
+      <module name="spring-boot-jpa" options="-parameters" />
+      <module name="spring-boot-redis" options="-parameters" />
+      <module name="spring-boot-scheduled" options="-parameters" />
+      <module name="spring-boot-web" options="-parameters" />
+      <module name="spring-boot-webconfig" options="-parameters" />
+    </option>
+  </component>
+</project>
