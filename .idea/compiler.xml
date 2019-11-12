@@ -33,16 +33,16 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="SpringBootLearning" options="-parameters" />
-      <module name="mybatis" options="-parameters" />
-      <module name="spring-boot-ehcache" options="-parameters" />
-      <module name="spring-boot-fastdfs" options="-parameters" />
-      <module name="spring-boot-helloworld" options="-parameters" />
-      <module name="spring-boot-jpa" options="-parameters" />
-      <module name="spring-boot-redis" options="-parameters" />
-      <module name="spring-boot-scheduled" options="-parameters" />
-      <module name="spring-boot-web" options="-parameters" />
-      <module name="spring-boot-webconfig" options="-parameters" />
+      <module name="SpringBootLearning" options="" />
+      <module name="mybatis" options="" />
+      <module name="spring-boot-ehcache" options="" />
+      <module name="spring-boot-fastdfs" options="" />
+      <module name="spring-boot-helloworld" options="" />
+      <module name="spring-boot-jpa" options="" />
+      <module name="spring-boot-redis" options="" />
+      <module name="spring-boot-scheduled" options="" />
+      <module name="spring-boot-web" options="" />
+      <module name="spring-boot-webconfig" options="" />
     </option>
   </component>
 </project>
