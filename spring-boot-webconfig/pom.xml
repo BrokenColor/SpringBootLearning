@@ -6,11 +6,11 @@
 		<groupId>groupId</groupId>
 		<artifactId>SpringBootLearning</artifactId>
 		<version>1.0-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.web</groupId>
 	<artifactId>spring-boot-webconfig</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>spring-boot-webconfig</name>
 	<description>spring-boot-webconfigproject for Spring Boot</description>
 
