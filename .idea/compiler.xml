@@ -9,7 +9,6 @@
         <module name="spring-boot-scheduled" />
         <module name="spring-boot-helloworld" />
         <module name="mybatis" />
-        <module name="SpringBootLearning" />
         <module name="spring-boot-jpa" />
         <module name="spring-boot-webconfig" />
         <module name="spring-boot-web" />
