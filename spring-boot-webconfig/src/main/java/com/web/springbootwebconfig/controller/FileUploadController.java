@@ -1,5 +1,6 @@
 package com.web.springbootwebconfig.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +21,14 @@ import java.util.Map;
 @Controller
 public class FileUploadController {
 
+    //自定义注解
+    @Value("my1.name")
+    private String name;
+
+    //自定义注解
+    @Value("my1.age")
+    private String age;
+
     @RequestMapping(value = "/fileUpload",method = RequestMethod.POST )
     @ResponseBody
     public Map fileUpload(@RequestParam("file") MultipartFile multipartFile) throws IOException {
@@ -27,6 +36,7 @@ public class FileUploadController {
         multipartFile.transferTo(new File("d:/"+multipartFile.getOriginalFilename()));
         Map map = new HashMap();
         map.put("msg","ok");
+        System.out.println("自定义注解》" + name + ":" + age);
         return map;
     }
 

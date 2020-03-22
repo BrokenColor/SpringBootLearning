@@ -1,8 +1,6 @@
 package com.redis.springbootredis.service.impl;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.redis.springbootredis.dao.CityRepository;
 import com.redis.springbootredis.pojo.City;
 import com.redis.springbootredis.service.CityService;
@@ -11,7 +9,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
