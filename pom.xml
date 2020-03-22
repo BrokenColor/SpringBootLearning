@@ -18,6 +18,7 @@
         <module>spring-boot-scheduled</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-fastdfs</module>
+        <module>spring-boot-websocket</module>
     </modules>
     <packaging>pom</packaging> <!--父模块打包类型必须为pom-->
     <dependencyManagement> <!--dependencyManagement用于管理依赖版本号-->
