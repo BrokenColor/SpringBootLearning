@@ -6,15 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-boot-scheduled" />
-        <module name="spring-boot-helloworld" />
         <module name="mybatis" />
-        <module name="spring-boot-jpa" />
-        <module name="spring-boot-webconfig" />
-        <module name="spring-boot-web" />
         <module name="spring-boot-ehcache" />
-        <module name="spring-boot-redis" />
         <module name="spring-boot-fastdfs" />
+        <module name="spring-boot-helloworld" />
+        <module name="spring-boot-jpa" />
+        <module name="spring-boot-redis" />
+        <module name="spring-boot-scheduled" />
+        <module name="spring-boot-web" />
+        <module name="spring-boot-webconfig" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +27,7 @@
       <module name="spring-boot-scheduled" target="1.8" />
       <module name="spring-boot-web" target="1.8" />
       <module name="spring-boot-webconfig" target="1.8" />
+      <module name="spring-boot-websocket" target="1.8" />
       <module name="SpringBootLearning" target="1.8" />
     </bytecodeTargetLevel>
   </component>
