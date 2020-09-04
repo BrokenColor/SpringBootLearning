@@ -7,44 +7,45 @@ package com.web.springbootwebconfig.common;
  * @Date 2019/8/20 16:55
  * @Version 1.0
  **/
-public class Result {
+public class Result<T> {
     private int code;
     private String msg;
-    private Object data;
+    private T data;
     private Long total;  //封装查询结果的总条数
 
     public Result() {
     }
 
-    public Result(int code, String msg, Object data, Long total) {
+    public Result(int code, String msg, T data, Long total) {
         this.code = code;
         this.msg = msg;
         this.data = data;
         this.total = total;
+    }
+    public Result setCode(ResultCode resultCode) {
+        this.code = resultCode.code();
+        return this;
+    }
+    public Result setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+
+    public Result setData(T data) {
+        this.data = data;
+        return this;
     }
 
     public int getCode() {
         return code;
     }
 
-    public void setCode(int code) {
-        this.code = code;
-    }
-
     public String getMsg() {
         return msg;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
     public Object getData() {
         return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
     }
 
     public Long getTotal() {
@@ -54,4 +55,10 @@ public class Result {
     public void setTotal(Long total) {
         this.total = total;
     }
+
+//    @Override
+//    public String toString() {
+//        return JSON.toJSONString(this);
+//    }
+
 }
